@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 # Middleman
 gem 'middleman', '~>4.0.0'
-gem 'middleman-gh-pages', '~> 0.0.3'
 gem 'middleman-syntax', '~> 2.1.0'
+gem 'middleman-s3_sync', '~> 4.0.3'
 gem 'middleman-autoprefixer', '~> 2.7.0'
 gem "middleman-sprockets", "~> 4.0.0.rc"
 gem 'rouge', '~> 1.10.1'
