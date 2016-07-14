@@ -38,3 +38,11 @@ configure :build do
   # activate :asset_hash
   # activate :gzip
 end
+
+activate :s3_sync do |s3_sync|
+  s3_sync.bucket = 'acorns-api-documentation'
+  s3_sync.region = 'us-east-1'
+  # There is no guarantee that the parent directory is named appropriately, so
+  # pull the project name from Github
+  s3_sync.prefix = `git remote show origin -n | grep h.URL | sed 's/.*://;s/.git$//'`.split('/').last.chomp
+end
