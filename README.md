@@ -10,6 +10,28 @@
 
 <p align="center"><em>The example above was created with Slate. Check it out at <a href="https://tripit.github.io/slate">tripit.github.io/slate</a>.</em></p>
 
+# Slate at Acorns
+
+## Deployment
+
+In order to build & deploy your api documentation, navigate to the root directory
+of your Slate documentation and build static assets for your documentation via:
+
+```sh
+bundle exec middleman build
+```
+
+Before you deploy, be sure to set the following environment variables
+(they may already be set):
+
+`AWS_ACCESS_KEY_ID`  
+`AWS_SECRET_ACCESS_KEY`
+
+Deployment is handled via
+```sh
+bundle exec middleman s3_sync
+```
+
 Features
 ------------
 
